@@ -34,5 +34,21 @@ public class DirectorService {
 		List<Director> list =drepo.SearchDirectorNameByMovie("RRR");
 		list.stream().forEach(System.out::println);
 	}
+	public void UpdateDirctorDeatails(String fn,String ln,String addrs,int no) {
+		List<Director> list = drepo.SearchDirectorDeatailsByName(fn,ln);
+		try {
+		if(list.isEmpty()) {
+			 System.out.println("No Movie With Given Title");
+			}
+		else {
+			 
+			drepo.UpdateDirectorDeatils(fn,ln,addrs,no);
+		}
+		}
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
 
 }

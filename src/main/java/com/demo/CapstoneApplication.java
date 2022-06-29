@@ -27,7 +27,7 @@ public class CapstoneApplication {
 	    //service.addMovie(dto);
 	    //service.getRecord();
 	    //service.UpdateRealeaseDate(LocalDate.of(2022,04,23),"RRR");
-	    service.GetmovieByDirectorName();
+	    //service.GetmovieByDirectorName();
 	    
 	    
 	    //****************************DIRECTOR CLASSS***********************//////
@@ -39,6 +39,7 @@ public class CapstoneApplication {
 	    d_dto.setEmailId("yasjraj@filmproduction.com");
 	    //dservice.addDirector(d_dto);
 	    //dservice.GetDirectorNameByMovie();
+	    dservice.UpdateDirctorDeatails("Yash","Raj","Marine Drive",659321478);
 	    
 	    
 	}

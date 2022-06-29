@@ -18,8 +18,8 @@ public  interface MovieRepository extends JpaRepository<Movie,Integer> {
 	public List<Movie> findByMovieTitle(String movieTitle);
 	
 	
-	//@Query(value="select m from Movie m where m.movietitle=?1 AND m.movieid=?2",nativeQuery=true)
-	//public List<Movie> findMovie(String movietitle,int movieid);
+	@Query(value="select m from Movie m where m.movietitle=?1 AND m.movieid=?2",nativeQuery=true)
+	public List<Movie> findMovie(String movietitle,int movieid);
 	 
     @Modifying
     @Query(value="update Movie SET datereleased=+:releaseDate Where movietitle=+:movie",nativeQuery=true)
